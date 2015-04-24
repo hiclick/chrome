@@ -4,6 +4,7 @@ out/production/groovy
 
 web/WEB-INF/work
 web/WEB-INF/tmp
+web/WEB-INF/classes
 
 Thumbs.db
 .DS_Store

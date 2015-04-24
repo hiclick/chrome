@@ -13,7 +13,7 @@ class Hexy {
         String s = (i < 40) ? "life" : (i > 50) ? "universe" : "everything";
         System.out.println(s);
 
-        try { int x = Integer.parseInt("one"); }
+        try { int x = Integer.parseInt("中国人"); }
         catch (IllegalArgumentException e){
             e.printStackTrace();
         }
