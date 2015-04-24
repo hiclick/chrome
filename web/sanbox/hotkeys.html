@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//Dtd HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+    <title>JavaScript Event KeyCode Test Page</title>
+    <link rel="stylesheet" href="http://www1.pconline.com.cn/api/libs/bootstrap/3_2_0/css/bootstrap.min.css"/>
+    <script type="text/javascript" src="http://www1.pconline.com.cn/api/libs/jquery/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript"
+            src="http://www1.pconline.com.cn/api/libs/bootstrap/3_2_0/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        td,th {
+            padding: 5px;
+        }
+    </style>
+
+    <script type="text/javascript">
+        focusInput = function () {
+            document.getElementById("input").focus();
+        };
+
+        clear = function () {
+            var eventTypes = ["onkeydown", "onkeypress", "onkeyup"];
+            var codeTypes = ["keycode", "charcode", "which"];
+            for (var event = 0; event < eventTypes.length; event++) {
+                for (var code = 0; code < codeTypes.length; code++) {
+                    var element = document.getElementById(eventTypes[event] + "_" + codeTypes[code]);
+                    while (element.firstChild != null) {
+                        element.removeChild(element.firstChild);
+                    }
+                }
+            }
+        };
+
+        processKeyEvent = function (eventType, event) {
+            // MSIE hack
+            if (window.event) {
+                event = window.event;
+            }
+
+            var element = document.getElementById(eventType + "_keycode");
+            var text = document.createTextNode("'" + event.keyCode + "'");
+            element.appendChild(text);
+
+            element = document.getElementById(eventType + "_charcode");
+            text = document.createTextNode("'" + event.charCode + "'");
+            element.appendChild(text);
+
+            element = document.getElementById(eventType + "_which");
+            text = document.createTextNode("'" + event.which + "'");
+            element.appendChild(text);
+        };
+
+        processKeyDown = function (event) {
+            clear();
+            processKeyEvent("onkeydown", event);
+        };
+
+        processKeyPress = function (event) {
+            processKeyEvent("onkeypress", event);
+        };
+
+        processKeyUp = function (event) {
+            processKeyEvent("onkeyup", event);
+        };
+    </script>
+</head>
+<body>
+<div class="container">
+    <h1>JavaScript Event KeyCode Test Page</h1>
+
+    <hr>
+
+    <p><label>Input:  <input id="input" type="text" value=""/></label></p>
+    
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+        <tr>
+            <th></th>
+            <th>onKeyDown</th>
+            <th>onKeyPress</th>
+            <th>onKeyUp</th>
+        </tr>
+        </thead>
+        <tr>
+            <th>event.keyCode</th>
+            <td id="onkeydown_keycode"></td>
+            <td id="onkeypress_keycode"></td>
+            <td id="onkeyup_keycode"></td>
+        </tr>
+        <tr>
+            <th>event.charCode</th>
+            <td id="onkeydown_charcode"></td>
+            <td id="onkeypress_charcode"></td>
+            <td id="onkeyup_charcode"></td>
+        </tr>
+        <tr>
+            <th>event.which</th>
+            <td id="onkeydown_which"></td>
+            <td id="onkeypress_which"></td>
+            <td id="onkeyup_which"></td>
+        </tr>
+    </table>
+    <H4>Notable Gotchas</H4>
+    <ul>
+        <LI>Firefox and onKeyDown vs. onKeyPressed</LI>
+        <LI>Firefox and keyCode vs. charCode</LI>
+        <LI>Enter key and onKeyPress on Firefox vs. IE</LI>
+    </ul>
+</div>
+<script type="text/javascript">
+    window.onload = focusInput;
+    document.getElementById("input").onkeydown = processKeyDown;
+    document.getElementById("input").onkeypress = processKeyPress;
+    document.getElementById("input").onkeyup = processKeyUp;
+
+
+</script>
+</body>
+</html>

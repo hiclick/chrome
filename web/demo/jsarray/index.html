@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>随机抽取性格</title>
+    <link rel='stylesheet' href='http://chenzixin.com/wp-content/themes/romangie/css/bootstrap.min.css?ver=4.1.1'
+          type='text/css' media='all'/>
+    <link rel='stylesheet' href='http://chenzixin.com/wp-content/themes/romangie/css/bootstrap-theme.min.css?ver=4.1.1'
+          type='text/css' media='all'/>
+    <link rel="stylesheet" href="http://chenzixin.com/static/css/demo/style.css"/>
+
+    <script type='text/javascript' src='http://chenzixin.com/wp-includes/js/jquery/jquery.js?ver=1.11.1'></script>
+    <script type='text/javascript'
+            src='http://chenzixin.com/wp-content/themes/romangie/js/bootstrap.min.js?ver=4.1.1'></script>
+
+
+</head>
+<body>
+<div id="wrap">
+
+
+
+    <div id="nav" class="clear">
+        <a href="http://chenzixin.com/">HOME</a>
+        <a href="http://chenzixin.com/about-me">ABOUT</a>
+        <br/>
+    </div>
+
+    <div id="content">
+
+        <h1>随机抽取性格</h1>
+
+        <hr>
+
+        <p>数组源：149个 关于性格的形容词</p>
+
+        <br><br>
+
+        <script type="text/javascript">
+
+            function randArray(m, len) {
+                m.sort(function () {
+                    return Math.random() - 0.5;
+                });
+                return m.slice(0, len);
+            }
+
+
+            var arr = ['细心', '沉着', '放荡', '精明', '刚毅', '聪慧', '世故', '粗暴', '和蔼', '任性', '保守', '害羞', '孤傲', '矫情', '强悍', '偏执', '鲁莽', '忠厚', '木讷', '贤惠', ' 温柔', '专横', '公正', '稳重', '小气', '乐观', '冷静', '和气', '俏皮', '正直', '仁义', '诙 谐', '体贴', '风骚', '古怪', '孝顺', '刁钻', '清纯', '勇敢', '妩媚', '苛刻', '善良', '霸道', '文静', '随和', '消极', '开朗', '高尚', '龌龊', '狡猾', '固执', '尖苛', '胆小', '马虎', ' 坦率', '安分', '急躁', '勤快', '虚荣', '阴柔', '敏感', '泼辣', '大度', '厚道', '豁达', '儒 雅', '健谈', '豪爽', '热情', '卑鄙', '沉静', '风流', '纯洁', '自负', '博学', '懒惰', '内向', '粗心', '腼腆', '主动', '狭隘', '宽容', '麻利', '狂妄', '懦弱', '贪婪', '伶俐', '自满', ' 自信', '慈祥', '野蛮', '古板', '专一', '拘束', '淘气', '坚强', '活泼', '谦卑', '聪明', '幽 默', '被动', '飒爽', '机灵', '臭美', '深沉', '谦虚', '优雅', '仗义', '倔强', '灵巧', '虚伪', '勤奋', '果断', '呆板', '轻率', '严肃', '残暴', '单纯', '傲慢', '守旧', '挑剔', '极端', ' 刻板', '浮躁', '柔弱', '轻浮', '谨慎', '爽快', '自私', '理智', '慷慨', '悲观', '朴实', '友 好', '大方', '外向', '冷酷', '斯文', '奸诈', '老练', '狠毒', '骄傲', '忸怩', '清高', '矜持', '诚实', '冷酷', '滑头', '可爱', '憨厚'];
+
+            var rows = 4;
+            var columns = 12;
+
+            document.write('<table class="table">');
+
+            for(i = 0; i < rows; i++){
+                var tempa = randArray(arr, 12);
+                document.write('<tr>');
+                for (j = 0; j < columns; j++){
+                    document.write('<td>' +  tempa[j] + '</td>');
+                }
+                document.write('</tr>');
+            }
+
+            document.write('</table>');
+        </script>
+
+        <p>
+            参考：
+            <br><br>
+            <a href="http://www.w3school.com.cn/js/js_loop_for.asp">JavaScript For 循环</a>
+        </p>
+        <p>
+            <a href="http://www.w3school.com.cn/jquery/manipulation_appendto.asp">jQuery 文档操作 - appendTo() 方法</a>
+        </p>
+        <p><a href="http://www.ryerson.ca/JavaScript/lectures/flowControl/loops/writingTables/simpleTable.html">Using Loops to Write Out HTML Tables</a></p>
+    </div>
+
+</div>
+</body>
+</html>
