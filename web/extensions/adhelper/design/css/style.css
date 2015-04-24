@@ -1,0 +1,177 @@
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* PC Reset */
+
+/* html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote,
+pre,form,fieldset,table,th,td,img{ margin: 0; padding: 0; } */
+
+.breakWord {white-space:break-word;word-break:break-all}
+
+body{ font-size: 12px;line-height:18px;color:#333}
+
+li{list-style: none; }
+img{ border:none; }
+input{font-family:Verdana,Arial,Helvetica,sans-serif;border:none}
+i,em{ font-style: normal; }
+a{color:#004F98;text-decoration:none;}
+a:hover{ text-decoration:none }
+h1,h2,h3,h4,h5,h6{font-size:12px;font-weight:100}
+.clear {clear:both;}
+.centen table {border-collapse:collapse; line-height:34px; margin-bottom:10px}
+.centen table thead tr th, table tfoot tr th {border:1px solid #d8d8d8; padding:0px 4px;}
+.centen table tbody tr td {padding:0 5px;}
+.centen table td, table th {border:1px solid #d8d8d8;}
+
+.wapTop{width:100%; background:url(../images/bg1.gif) repeat-x 0 0}
+.top{width:1000px; height:110px; display:block; background:url(../images/banner.gif) no-repeat 0 0; margin:0 auto}
+.top .login{float:right; color:#bde9ff; height:20px; line-height:20px}
+.top .login .user{margin:0 6px}
+.top .login a{color:#fff; margin:0 6px}
+.top .nav{height:34px; margin-top:56px; float:right; display:block; overflow:hidden}
+.top .nav .on1{width:103px; height:34px; float:left; margin-right:5px; background:url(../images/navon1.gif) no-repeat 0 0; line-height:0; font-size:0; overflow:hidden}
+.top .nav .on2{width:103px; height:34px; float:left; margin-right:5px; background:url(../images/navon2.gif) no-repeat 0 0; line-height:0; font-size:0; overflow:hidden}
+.top .nav .on3{width:103px; height:34px; float:left; margin-right:5px; background:url(../images/navon3.gif) no-repeat 0 0; line-height:0; font-size:0; overflow:hidden}
+.top .nav .on4{width:103px; height:34px; float:left; margin-right:5px; background:url(../images/navon4.gif) no-repeat 0 0; line-height:0; font-size:0; overflow:hidden}
+.top .nav .off1{width:103px; height:34px; float:left; margin-right:5px; background:url(../images/navoff1.gif) no-repeat 0 0; line-height:0; font-size:0; overflow:hidden}
+.top .nav .off2{width:103px; height:34px; float:left; margin-right:5px; background:url(../images/navoff2.gif) no-repeat 0 0; line-height:0; font-size:0; overflow:hidden}
+.top .nav .off3{width:103px; height:34px; float:left; margin-right:5px; background:url(../images/navoff3.gif) no-repeat 0 0; line-height:0; font-size:0; overflow:hidden}
+.top .nav .off4{width:103px; height:34px; float:left; margin-right:5px; background:url(../images/navoff4.gif) no-repeat 0 0; line-height:0; font-size:0; overflow:hidden}
+
+.wapMid{width:100%; background:url(../images/bg2.gif) repeat-x 0 0}
+.centen{width:990px; margin:0 auto; padding:35px 5px 0}
+.centen .pop{background:#fbfbfb}
+.centen .box1{line-height:40px; background:#f6f6f6; font-size:14px; color:#777}
+.centen .box1 .title{width:100%; text-align:left; background:url(../images/title.gif) repeat-x 0 0; font-weight:bold; text-indent:1em; line-height:34px; color:#000}
+.centen .box1 .thead{text-align:right; font-size:14px; color:#1e87ba}
+.centen .box1 .thead2{text-align:center; font-size:12px; color:#1e87ba; background:#f0f0f0; height:30px; line-height:30px}
+.centen .box1 .thead3{text-align:right; font-size:14px; color:#1e87ba; float:left; width:130px}
+.centen .box1 .inputBox1{width:265px; height:20px; line-height:20px; border:1px solid #e0e0e0; margin:5px}
+.centen .box1 .inputBox2{width:365px; line-height:18px; border:1px solid #e0e0e0; margin:10px 5px}
+.centen .box1 .inputBox3{width:100px; height:20px; line-height:20px; border:1px solid #e0e0e0; margin:5px}
+.centen .box1 .inputBut1{width:66px; height:23px; background:url(../images/but2.gif) no-repeat 0 0; cursor:pointer; font-size:12px; font-weight:bold; color:#ff5a00; margin-bottom:5px}
+.centen .box1 .inputBut2{width:66px; height:23px; background:url(../images/but1.gif) repeat-x 0 0; cursor:pointer; font-size:12px; font-weight:bold; color:#fff; margin:8px 20px}
+.centen .box1 .group{width:100%; clear:both}
+.centen .box1 .list{font-size:12px; color:#000; float:left; padding-left:5px; line-height:24px}
+.centen .box1 .icon1{width:24px; height:24px; float:left; background:url(../images/c2.gif) no-repeat 0 0}
+.centen .box1 .keyWord{color:#1e87ba}
+.centen .box1 .menber{ float:left; width:470px; line-height:24px; margin-top:7px}
+.centen .box1 .menber li{width:91px; height:28px; padding:0 5px; float:left; line-height:28px}
+.centen .box1 .menber2{ float:left; width:470px; line-height:24px; margin-top:2px}
+
+.centen .box2{line-height:40px; background:#f6f6f6; font-size:12px; color:#777; text-align:center}
+.centen .box2 a{color:#9eaeb1}
+.centen .box2 a:hover{color:#1e87ba; text-decoration:underline}
+.centen .box2 .list{text-align:left}
+.centen .box2 select{margin:20px 32px 10px}
+.centen .addNo{color:#000}
+.centen .addYes{color:red}
+.centen .text{color:#ff8a00}
+.centen .text2 a{color:#ff8a00}
+.centen .text2 a:hover{color:red; text-decoration:underline}
+
+.centen .box3{border:none; margin-bottom:10px}
+.centen .box3 tbody tr td {padding:0}
+.box390{ width:100%; position:relative;background:#93a0a2}
+.box390 .toc{background:url(../images/t2.gif) no-repeat 0 0}
+.box390 .pagination{width:100px;clear:both;position:absolute;top:0px; right:0px}
+.box390 .pagination a{ color:#364548; width:100px; height:28px; display:inline; float:left;text-align:center; line-height:28px; font-weight:bold}
+.box390 .pagination a:hover,.box390 .pagination a.selected{background:url(../images/t1.gif) no-repeat 0 0; color:#000}
+.box390 .dTitle{ width:855px;height:72px; line-height:24px; padding:20px}
+.box390 .name{float:left; width:77px; text-align:center; font-size:14px}
+.box390 .name a{color:#fff}
+.box390 .name a:hover{background:#ff8901; padding:5px 5px 3px}
+
+
+/*page*/
+.page{width:100%; float:left; border:0; display:block; text-align:center}
+.page em{padding:2px 4px; line-height:26px; text-align:left}
+.centen .box2 .page a{padding:3px 5px 2px; line-height:26px; text-align:left; color:#7d7d7d;  text-decoration:none; margin:0 2px}
+.centen .box2 .page a:hover{color:#f80; text-decoration:underline}
+.page span{padding:3px 6px 2px; line-height:26px; text-align:left; color:#fff; background:#f80; font-size:14px}
+
+
+/*footer*/
+.wapFot{width:100%; border-top:1px solid #e6e6e6}
+.wapFot .footer{width:1000px; height:80px; display:block; margin:0 auto; text-align:center; color:#9c9c9c; line-height:40px}
+
+
+/*popWindows*/
+.ui-dialog{border:1px solid #d8d8d8}
+.ui-draggable .ui-dialog-titlebar{cursor:move; float:left; width:600px}
+.ui-dialog .ui-dialog-titlebar{height:32px; line-height:32px; padding:0 10px; position:relative}
+.ui-dialog-title-dialog{color:#fff; height:32px; line-height:32px; float:left}
+.ui-dialog-title{color:#fff; height:32px; line-height:32px; float:left; font-weight:bold}
+.ui-widget-header .ui-icon{width:24px; height:30px; float:right; background:url(../images/c1.gif) no-repeat scroll 0 5px; font-size:0; line-height:0; overflow:hidden}
+.ui-widget-header{background:#344346}
+.ui-dialog .ui-dialog-buttonpane button{width:70px; border:none;height:23px; background:url(../images/but1.gif) repeat-x 0 0; cursor:pointer; font-size:12px; font-weight:bold; color:#fff; margin:8px 20px}
+.ui-dialog .ui-dialog-buttonpane{background:#fbfbfb;text-align:center; float:left; width:100%}
+
+.ui-dialog-content{background:#fbfbfb; float:left}
+.ui-dialog-content table {border-collapse:collapse; line-height:34px; margin-bottom:10px}
+.ui-dialog-content table thead tr th, table tfoot tr th {border:1px solid #e6e6e6; padding:0px 4px; border-left:none; border-right:none}
+.ui-dialog-content table tbody tr td {padding:0 5px;}
+.ui-dialog-content table td, table th {border:1px solid #e6e6e6; border-left:none; border-right:none}
+.ui-dialog-content .pop{background:#fbfbfb}
+.ui-dialog-content .box1{line-height:40px; background:#f6f6f6; font-size:14px; color:#777; margin-bottom:0}
+.ui-dialog-content .box1 .thead3{text-align:right; font-size:14px; color:#1e87ba; float:left; width:130px}
+.ui-dialog-content .box1 .menber{ float:left; width:470px; line-height:24px; margin-top:7px}
+.ui-dialog-content .box1 .menber li{width:91px; height:28px; padding:0 5px; float:left; line-height:28px}
+.ui-dialog-content .box1 .menber2{ float:left; width:470px; line-height:24px; margin-top:2px}
+.ui-dialog-content .box1 .group{width:100%; clear:both}
+.ui-dialog-content .box1 .list{font-size:12px; color:#000; float:left; padding-left:5px; line-height:24px}
+.ui-dialog-content .box1 .list a{color:#000}
+.ui-dialog-content .box1 .list a:hover{color:#ff8a00; text-decoration:underline}
+.ui-dialog-content .box1 .inputBox1{width:265px; height:20px; line-height:20px; border:1px solid #e0e0e0; margin:5px}
+.ui-dialog-content .box1 .inputBox2{width:365px; line-height:18px; border:1px solid #e0e0e0; margin:10px 5px}
+.ui-dialog-content .box1 .inputBox3{width:100px; height:20px; line-height:20px; border:1px solid #e0e0e0; margin:5px}
+
+

@@ -1,0 +1,449 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>太平洋设计项目管理系统</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
+
+<script type="text/javascript">
+			$(function(){
+		  //开始设计
+				$('#dialog1').dialog({
+					autoOpen: false,
+					width: 615,
+					buttons: {
+						"开始设计": function() { 
+							$(this).dialog("close"); 
+						}, 
+						"取 消": function() { 
+							$(this).dialog("close"); 
+						} 
+					}
+				});
+				
+				$('#dialog_link1').click(function(){
+					$('#dialog1').dialog('open');
+					return false;
+				});
+				
+			//结束设计	
+				$('#dialog2').dialog({
+					autoOpen: false,
+					width: 615,
+					buttons: {
+						"提 交": function() { 
+							$(this).dialog("close"); 
+						}, 
+						"取 消": function() { 
+							$(this).dialog("close"); 
+						} 
+					}
+				});
+				
+				$('#dialog_link2').click(function(){
+					$('#dialog2').dialog('open');
+					return false;
+				});
+				
+				//查看需求	
+				$('#dialog3').dialog({
+					autoOpen: false,
+					width: 615,
+					buttons: {
+						"提 交": function() { 
+							$(this).dialog("close"); 
+						}, 
+						"取 消": function() { 
+							$(this).dialog("close"); 
+						} 
+					}
+				});
+				
+				$('#dialog_link3').click(function(){
+					$('#dialog3').dialog('open');
+					return false;
+				});
+				
+				//反馈意见	
+				$('#dialog4').dialog({
+					autoOpen: false,
+					width: 615,
+					buttons: {
+						"提 交": function() { 
+							$(this).dialog("close"); 
+						}, 
+						"取 消": function() { 
+							$(this).dialog("close"); 
+						} 
+					}
+				});
+				
+				$('#dialog_link4').click(function(){
+					$('#dialog4').dialog('open');
+					return false;
+				});
+				
+				//修改新收到项目单	
+				$('#dialog5').dialog({
+					autoOpen: false,
+					width: 615,
+					buttons: {
+						"提 交": function() { 
+							$(this).dialog("close"); 
+						}, 
+						"取 消": function() { 
+							$(this).dialog("close"); 
+						} 
+					}
+				});
+				
+				$('#dialog_link5').click(function(){
+					$('#dialog5').dialog('open');
+					return false;
+				});
+				
+				//修改设计中项目单	
+				$('#dialog6').dialog({
+					autoOpen: false,
+					width: 615,
+					buttons: {
+						"提 交": function() { 
+							$(this).dialog("close"); 
+						}, 
+						"取 消": function() { 
+							$(this).dialog("close"); 
+						} 
+					}
+				});
+				
+				$('#dialog_link6').click(function(){
+					$('#dialog6').dialog('open');
+					return false;
+				});
+				
+				//修改完成项目单	
+				$('#dialog7').dialog({
+					autoOpen: false,
+					width: 615,
+					buttons: {
+						"提 交": function() { 
+							$(this).dialog("close"); 
+						}, 
+						"取 消": function() { 
+							$(this).dialog("close"); 
+						} 
+					}
+				});
+				
+				$('#dialog_link7').click(function(){
+					$('#dialog7').dialog('open');
+					return false;
+				});
+				
+			});
+		</script>
+</head>
+
+<body>
+
+
+
+<div class="wapTop">
+<div class="top">
+<div class="login"><span class="user">你好！穿拖鞋狂奔的人</span><a href="">[退出系统]</a><a href="">[修改密码]</a></div>
+<div class="clear"></div>
+<div class="nav">
+<a href="" class="off1">我要下单</a>
+<a href="" class="off2">分派项目单</a>
+<span class="on3">我的项目单</span>
+<a href="" class="off4">查询项目单</a>
+</div>
+</div>
+</div>
+
+<div class="wapMid">
+<div class="centen">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="box1">
+<thead>
+ <tr>
+  <th colspan="9" class="title">新收到的项目单</th>
+ </tr>
+ </thead>
+ <tbody class="box2">
+ <tr>
+  <td width="10%" class="thead2">操作</td>
+  <td width="6%" class="thead2">网站群</td>
+  <td width="5%" class="thead2">类别</td>
+  <td width="6%" class="thead2">跟进人</td>
+  <td width="10%" class="thead2">收单时间</td>
+  <td width="11%" class="thead2">希望完成时间</td>
+  <td width="8%" class="thead2">加急状态</td>
+  <td width="33%" class="thead2">项目名称</td>
+  <td width="11%" class="thead2">执行</td>
+ </tr>
+ <tr>
+  <td><a href="#" id="dialog_link5">改时间</a> | <a href="">退回</a></td>
+  <td>电脑</td>
+  <td>专题</td>
+  <td>王筝</td>
+  <td>2009.06.19</td>
+  <td>2009.06.19</td>
+  <td><span class="addNo">否</span></td>
+  <td><span class="list">[广州]设计部工作表跟踪系统设计部工作表跟踪系统</span></td>
+  <td><span class="text2"><a href="#" id="dialog_link1">开始设计</a></span></td>
+ </tr>
+ <tr>
+  <td><a href="">改时间</a> | <a href="">退回</a></td>
+  <td>电脑</td>
+  <td>专题</td>
+  <td>王筝</td>
+  <td>2009.06.19</td>
+  <td>2009.06.19</td>
+  <td><span class="addYes">是</span></td>
+  <td><span class="list">[广州]设计部工作表跟踪系统</span></td>
+  <td><span class="text2"><a href="">开始设计</a></span></td>
+ </tr>
+ </tbody>
+</table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="box1">
+<thead>
+ <tr>
+  <th colspan="9" class="title">正在设计的项目单</th>
+ </tr>
+ </thead>
+ <tbody class="box2">
+ <tr>
+  <td width="10%" class="thead2">操作</td>
+  <td width="6%" class="thead2">网站群</td>
+  <td width="5%" class="thead2">类别</td>
+  <td width="6%" class="thead2">跟进人</td>
+  <td width="10%" class="thead2">收单时间</td>
+  <td width="11%" class="thead2">希望完成时间</td>
+  <td width="8%" class="thead2">加急状态</td>
+  <td width="30%" class="thead2">项目名称</td>
+  <td width="14%" class="thead2">执行</td>
+ </tr>
+ <tr>
+  <td><a href="#" id="dialog_link6">改时间</a> | <a href="">退回</a></td>
+  <td>电脑</td>
+  <td>专题</td>
+  <td>王筝</td>
+  <td>2009.06.19</td>
+  <td>2009.06.19</td>
+  <td><span class="addNo">否</span></td>
+  <td><span class="list">[广州]设计部工作表跟踪系统设计部工作表跟踪系统</span></td>
+  <td><span class="text2"><a href="#" id="dialog_link3">查看需求</a> | <a href="#" id="dialog_link2">结束设计</a></span></td>
+ </tr>
+ <tr>
+  <td><a href="">改时间</a> | <a href="">退回</a></td>
+  <td>电脑</td>
+  <td>专题</td>
+  <td>王筝</td>
+  <td>2009.06.19</td>
+  <td>2009.06.19</td>
+  <td><span class="addYes">是</span></td>
+  <td><span class="list">[广州]设计部工作表跟踪系统</span></td>
+  <td><span class="text2"><a href="">查看需求</a> | <a href="">结束设计</a></span></td>
+ </tr>
+ </tbody>
+</table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="box1">
+<thead>
+ <tr>
+  <th colspan="9" class="title">我已经完成的项目单</th>
+ </tr>
+ </thead>
+ <tbody class="box2">
+ <tr>
+  <td width="10%" class="thead2">操作</td>
+  <td width="6%" class="thead2">网站群</td>
+  <td width="5%" class="thead2">类别</td>
+  <td width="6%" class="thead2">跟进人</td>
+  <td width="10%" class="thead2">收单时间</td>
+  <td width="11%" class="thead2">希望完成时间</td>
+  <td width="8%" class="thead2">加急状态</td>
+  <td width="30%" class="thead2">项目名称</td>
+  <td width="14%" class="thead2">执行</td>
+ </tr>
+ <tr>
+  <td><a href="#" id="dialog_link7">修改</a> | <a href="">退回</a></td>
+  <td>电脑</td>
+  <td>专题</td>
+  <td>王筝</td>
+  <td>2009.06.19</td>
+  <td>2009.06.19</td>
+  <td><span class="addNo">否</span></td>
+  <td><span class="list">[广州]设计部工作表跟踪系统设计部工作表跟踪系统</span></td>
+  <td><span class="text2"><a href="">查看效果</a> | <a href="#" id="dialog_link4">查看反馈</a></span></td>
+ </tr>
+ <tr>
+  <td><a href="">修改</a> | <a href="">退回</a></td>
+  <td>电脑</td>
+  <td>专题</td>
+  <td>王筝</td>
+  <td>2009.06.19</td>
+  <td>2009.06.19</td>
+  <td><span class="addYes">是</span></td>
+  <td><span class="list">[广州]设计部工作表跟踪系统</span></td>
+  <td><span class="text2"><a href="">查看效果</a> | <a href="">查看反馈</a></span></td>
+ </tr>
+ <tr>
+  <td colspan="9"><div class="page"><a href="">首页</a><a href="">上一页</a><a href="">1</a><span>2</span><a href="">3</a>...<a href="">10</a><a href="">11</a><a href="">12</a><a href="">下一页</a><a href="">末页</a></div></td>
+ </tr>
+ </tbody>
+</table>
+
+
+<div id="dialog1" title="开始设计新项目单">
+<table width="615" border="0" cellspacing="0" cellpadding="0" class="box1">
+ <tr>
+  <td class="pop"><span class="thead3">项目名称：</span><span class="menber">PConline论坛与摄影部落外拍专题设计单</span></td>
+ </tr>
+ <tr>
+  <td class="pop"><span class="thead3">相关要求：</span><span class="menber">要求风格很LADY,互动性比较强,能够体现用户参与的行为,主色调用绿色为主.要求风格很LADY,互动性比较强,能够体现用户参与的行为,主色调用绿色为主.</span></td>
+ </tr>
+ <tr>
+  <td class="pop"><span class="thead3">附&nbsp;&nbsp;&nbsp;&nbsp;件：</span>
+  <span class="menber">
+  <p class="group"><span class="list"><a href="" target="_blank">1.唯有金深情寻觅“炫金女声”MV女主角活动回顾.eml</a></span></p>
+  <p class="group"><span class="list"><a href="" target="_blank">2.唯有金深情寻觅“炫金女声”MV女主角活动回顾.eml</a></span></p>
+  </span></td>
+ </tr>
+</table>
+</div>
+
+
+<div id="dialog2" title="结束设计中项目">
+<table width="615" border="0" cellspacing="0" cellpadding="0" class="box1">
+ <tr>
+  <td class="pop"><span class="thead3">项目名称：</span><span class="menber">PConline论坛与摄影部落外拍专题设计单</span></td>
+ </tr>
+ <tr>
+  <td class="pop"><span class="thead3">实际完成时间：</span><span class="menber2"><input type="text" name="textfield" class="inputBox3" /></span></td>
+ </tr>
+ <tr>
+  <td class="pop"><span class="thead3">效果地址：</span><span class="menber2"><input type="text" name="textfield" class="inputBox1" /></span></td>
+ </tr>
+ <tr>
+  <td class="pop"><span class="thead3">编辑反馈：</span><span class="menber2"><textarea name="" cols="" rows="5" class="inputBox2"></textarea></span></td>
+ </tr>
+</table>
+</div>
+
+
+
+<div id="dialog3" title="查看项目需求">
+<table width="615" border="0" cellspacing="0" cellpadding="0" class="box1" >
+ <tr>
+  <td class="pop"><span class="thead3">项目名称：</span><span class="menber">PConline论坛与摄影部落外拍专题设计单</span></td>
+ </tr>
+ <tr>
+  <td class="pop"><span class="thead3">相关要求：</span><span class="menber">要求风格很LADY,互动性比较强,能够体现用户参与的行为,主色调用绿色为主.要求风格很LADY,互动性比较强,能够体现用户参与的行为,主色调用绿色为主.</span></td>
+ </tr>
+ <tr>
+  <td class="pop"><span class="thead3">附&nbsp;&nbsp;&nbsp;&nbsp;件：</span>
+  <span class="menber">
+  <p class="group"><span class="list">1.唯有金深情寻觅“炫金女声”MV女主角活动回顾.eml</span></p>
+  <p class="group"><span class="list">2.唯有金深情寻觅“炫金女声”MV女主角活动回顾.eml</span></p>
+  </span></td>
+ </tr>
+</table>
+</div>
+
+
+<div id="dialog4" title="查看项目反馈意见">
+<table width="615" border="0" cellspacing="0" cellpadding="0" class="box1">
+ <tr>
+  <td class="pop"><span class="thead3">项目名称：</span><span class="menber">PConline论坛与摄影部落外拍专题设计单</span></td>
+ </tr>
+ <tr>
+  <td class="pop"><span class="thead3">编辑反馈：</span><span class="menber">很好很强大！很好很强大！很好很强大！很好很强大！</span></td>
+ </tr>
+</table>
+</div>
+
+
+<div id="dialog5" title="修改新收到项目单">
+<table width="615" border="0" cellspacing="0" cellpadding="0" class="box1">
+ <tr>
+  <td class="pop"><span class="thead3">项目名称：</span><span class="menber">PConline论坛与摄影部落外拍专题设计单</span></td>
+ </tr>
+ <tr>
+  <td class="pop"><span class="thead3">跟进人：</span><span class="menber2">
+  <input type="text" name="textfield" class="inputBox3" /></span></td>
+ </tr>
+ <tr>
+  <td class="pop"><span class="thead3">希望完成时间：</span><span class="menber2">
+  <input type="text" name="textfield" class="inputBox3" /></span></td>
+ </tr>
+</table>
+</div>
+
+
+<div id="dialog6" title="修改新设计中项目单">
+<table width="615" border="0" cellspacing="0" cellpadding="0" class="box1">
+ <tr>
+  <td class="pop"><span class="thead3">项目名称：</span><span class="menber">PConline论坛与摄影部落外拍专题设计单</span></td>
+ </tr>
+ <tr>
+  <td class="pop"><span class="thead3">跟进人：</span><span class="menber2">
+  <input type="text" name="textfield" class="inputBox3" /></span></td>
+ </tr>
+ <tr>
+  <td class="pop"><span class="thead3">希望完成时间：</span><span class="menber2">
+  <input type="text" name="textfield" class="inputBox3" /></span></td>
+ </tr>
+</table>
+</div>
+
+
+<div id="dialog7" title="修改新完成的项目单">
+<table width="615" border="0" cellspacing="0" cellpadding="0" class="box1">
+ <tr>
+  <td class="pop"><span class="thead3">项目名称：</span><span class="menber">PConline论坛与摄影部落外拍专题设计单</span></td>
+ </tr>
+ <tr>
+  <td class="pop"><span class="thead3">实际完成时间：</span><span class="menber2"><input type="text" name="textfield" class="inputBox3" /></span></td>
+ </tr>
+ <tr>
+  <td class="pop"><span class="thead3">效果地址：</span><span class="menber2"><input type="text" name="textfield" class="inputBox1" /></span></td>
+ </tr>
+ <tr>
+  <td class="pop"><span class="thead3">编辑反馈：</span><span class="menber2"><textarea name="" cols="" rows="5" class="inputBox2"></textarea></span></td>
+ </tr>
+</table>
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+<div class="wapFot"><div class="footer">Copyright 2009 太平洋网络设计部 All Rights Reserced.</div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

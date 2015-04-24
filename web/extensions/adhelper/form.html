@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>测试</title>
+    <link href="js/jquery-ui-192/css/custom-theme/jquery-ui-1.9.2.css" rel="stylesheet">
+    <script type="text/javascript" src="js/mootools/mootools-1.5.0.js"></script>
+    <script type="text/javascript" src="js/jquery/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery-ui-192/js/jquery-ui-1.9.2.js"></script>
+    <script type="text/javascript">$.noConflict();</script>
+    <!--<script type="text/javascript">var jq = $.noConflict();</script>-->
+</head>
+<body>
+
+
+<h3>Form</h3>
+
+<hr>
+
+<form>
+
+<!--////////////////////////////-->
+
+<div id="dialog" title="广告助手">
+<span>美化界面：<input type="button" id="mofifyth" value="修正表头"/>
+    <input type="button" id="mofifymem" value="更正备注"/>
+    <input type="button" id="removeProvider" value="隐藏渠道"/>
+</span>
+<br/><br/>
+<span>常用隐藏：
+<label><input type="checkbox" name="target_tr" value="位置标识" />位置标识</label>
+<label><input type="checkbox" name="target_tr" value="监" />监测</label>
+<label><input type="checkbox" name="target_tr" value="备注" />备注</label>
+<label><input type="checkbox" name="target_tr" value="外购点击" />外购点击</label>
+<label><input type="checkbox" name="target_tr" value="外购实时" />外购实时</label>
+<label><input type="checkbox" name="target_tr" value="完成率" />完成率</label>
+<input type="button" id="chkall" value="全选">
+</span>
+
+<br/><br/>
+
+<label>其它隐藏：
+    <select id="target_tr">
+        <option value="点击目标">点击目标</option>
+        <option value="公司名称">公司名称</option>
+        <option value="实时点击">实时点击</option>
+        <option value="VM点击">VM点击</option>
+        <option value="真实PV">真实PV</option>
+        <option value="真实点击">真实点击</option>
+        <option value="更新时间">更新时间</option>
+        <option value="更新类型">更新类型</option>
+    </select>
+</label>
+</div>
+
+<!--////////////////////////////-->
+
+<br/><br/>
+
+<span><label>手工隐藏：
+
+    <input type="text" name="htitle" id="htitle" value="完成率"/></label>
+    <span class="red">*</span> 需精确匹配</span>
+
+</form>
+
+
+<h3>Button</h3>
+
+<hr>
+
+<button id="button">A button element</button>
+
+<form style="margin-top: 1em;">
+    <div id="radioset">
+        <input type="radio" id="radio1" name="radio"><label for="radio1">Choice 1</label>
+        <input type="radio" id="radio2" name="radio" checked="checked"><label for="radio2">Choice 2</label>
+        <input type="radio" id="radio3" name="radio"><label for="radio3">Choice 3</label>
+    </div>
+</form>
+
+<script type="text/javascript">
+
+jQuery(document).ready(function($) {
+    // Code that uses jQuery's $ can follow here.
+    alert("jQ: " + $("#target_tr").val());
+    $("#button").button();
+});
+
+// Code that uses other library's $ can follow here.
+alert("Moo: " + $("htitle").get('value'));
+
+// jQuery
+jQuery( "#radioset" ).buttonset();
+
+</script>
+
+</body>
+</html>

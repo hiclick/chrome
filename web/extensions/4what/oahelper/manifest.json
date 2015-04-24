@@ -1,0 +1,57 @@
+{
+	"author": "4what",
+	"homepage_url": "http://4what.github.com/",
+
+	"manifest_version": 2,
+
+	"name": "OA Helper",
+	"version": "1.0.1",
+
+	"description": "Powered by 4what @ PCGROUP",
+	"icons": {
+		"16": "images/icon16.png",
+		"48": "images/icon48.png",
+		"128": "images/icon128.png"
+	},
+
+	"browser_action": {
+		"default_icon": {
+			"19": "images/icon19.png",
+			"38": "images/icon38.png"
+		},
+		"default_popup": "",
+		"default_title": ""
+	},
+
+	"background": {
+		"scripts": ["js/bg.js"],
+		"persistent": false
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"*://dev5.pconline.com.cn/*",
+				"*://oa.pc.com.cn/*"
+			],
+			"css": [],
+			"js": [
+				"js/jquery/jquery-1.8.3.min.js",
+
+				"js/dwz/dwz.core.js",
+				"js/dwz/dwz.pagination.js",
+				"js/dwz/pc.dwz.cssTable.js",
+
+				"js/dwz/sellApply.js",
+
+				"js/core.js",
+				"js/draft.js"
+			]
+		}
+	],
+	"options_page": "options.html",
+	"permissions": [
+		"<all_urls>",
+		"storage",
+		"tabs"
+	]
+}

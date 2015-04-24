@@ -1,0 +1,30 @@
+{
+	"manifest_version": 2,
+
+	"name": "工时补量 (Modified by 4what)",
+	"version": "1.1",
+
+	"description": "工时补量插件",
+	"icons": {
+		"16": "icon_16.png",
+		"48": "icon_48.png",
+		"128": "icon_128.png"
+	},
+
+	"content_scripts": [
+		{
+			"matches": [
+				"*://timesheet.pc.com.cn/*"
+			],
+			"js": [
+				"pc.jquery1.3.js",
+				"13383623904110.js"
+			]
+		}
+	],
+	"permissions": [
+		"http://*/*",
+		"https://*/*",
+		"tabs"
+	]
+}

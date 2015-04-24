@@ -1,0 +1,9 @@
+.idea/*
+out/production/scala
+out/production/groovy
+
+web/WEB-INF/work
+web/WEB-INF/tmp
+
+Thumbs.db
+.DS_Store

@@ -1,0 +1,30 @@
+{
+	"manifest_version": 2,
+
+	"name": "工资系统取验证码 (Modified by christen)",
+	"version": "1.0",
+
+	"description": "工资系统取验证码",
+	"icons": {
+		"16": "images/icon16.png",
+		"48": "images/icon48.png",
+		"128": "images/icon128.png"
+	},
+
+	"content_scripts": [
+		{
+			"matches": [
+				"*://192.168.10.220/salaryQuery.do*"
+			],
+			"js": [
+				"pc.jquery1.3.js",
+				"getcode.js"
+			]
+		}
+	],
+	"permissions": [
+		"http://*/*",
+		"https://*/*",
+		"tabs"
+	]
+}

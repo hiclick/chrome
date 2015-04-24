@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Test Ext</title>
+    <link rel="stylesheet" type="text/css" href="../js/ext-5.1.0/packages/ext-theme-crisp/build/resources/ext-theme-crisp-all.css" />
+    <link rel="stylesheet" type="text/css" href="../css/main.css" />
+    <script type="text/javascript" src="../js/ext-5.1.0/bootstrap.js"></script>
+    <script type="text/javascript" src="../js/ext-5.1.0/packages/ext-locale/build/ext-locale-zh_CN.js"></script>
+
+</head>
+<body>
+
+<p>
+    <b>Confirm</b><br />
+    Standard Yes/No dialog. &nbsp;
+    <button id="mb1">Show</button>
+</p>
+
+
+    <script>
+
+        Ext.onReady(function(){
+            Ext.get('mb1').on('click', function(e){
+                Ext.MessageBox.confirm('Confirm', 'Are you sure you want to do that?', showResult);
+            });
+
+            function showResult(btn){
+                alert("You Click the " + btn + " Button!")
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Untitled Document</title>  
+    
+    <link href="http://www1.pconline.com.cn/api/libs/syntaxhighlighter/3_0_83/styles/shCore.css" rel="stylesheet" type="text/css" />
+    <link href="http://www1.pconline.com.cn/api/libs/syntaxhighlighter/3_0_83/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+    <link href="http://www1.pconline.com.cn/api/libs/bootstrap/3_2_0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    <script src="http://www1.pconline.com.cn/api/libs/jquery/jquery-1.8.3.min.js"></script>
+
+    <script type="text/javascript" src="http://www1.pconline.com.cn/api/libs/syntaxhighlighter/3_0_83/scripts/shCore.js"></script>
+    <script type="text/javascript" src="http://www1.pconline.com.cn/api/libs/syntaxhighlighter/3_0_83/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="http://www1.pconline.com.cn/api/libs/syntaxhighlighter/3_0_83/scripts/shBrushPhp.js"></script>
+
+
+    <script type="text/javascript" src="http://www1.pconline.com.cn/api/libs/bootstrap/3_2_0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h3>语法高亮测试</h3>
+
+<hr>
+
+<h4>PHP</h4>
+
+<pre class="brush: php">
+
+function GetIP(){
+   if (getenv("HTTP_CLIENT_IP") && strcasecmp(getenv("HTTP_CLIENT_IP"), "unknown"))
+           $ip = getenv("HTTP_CLIENT_IP");
+       else if (getenv("HTTP_X_FORWARDED_FOR") && strcasecmp(getenv("HTTP_X_FORWARDED_FOR"), "unknown"))
+           $ip = getenv("HTTP_X_FORWARDED_FOR");
+       else if (getenv("REMOTE_ADDR") && strcasecmp(getenv("REMOTE_ADDR"), "unknown"))
+           $ip = getenv("REMOTE_ADDR");
+       else if (isset($_SERVER['REMOTE_ADDR']) && $_SERVER['REMOTE_ADDR'] && strcasecmp($_SERVER['REMOTE_ADDR'], "unknown"))
+           $ip = $_SERVER['REMOTE_ADDR'];
+       else
+           $ip = "unknown";
+   return($ip);
+}
+
+
+$ip = GetIP();
+
+echo "你的真实IP地址：".$ip;
+
+</pre>
+
+<h4>JS</h4>
+
+<pre class="brush:js">
+
+String.prototype.trim = function () {
+    return this.replace(/(^\s*)|(\s*$)/g, "");
+};
+
+String.prototype.ltrim = function () {
+    return this.replace(/(^\s*)/g, "");
+};
+
+String.prototype.rtrim = function () {
+    return this.replace(/(\s*$)/g, "");
+};
+</pre>
+
+</div>
+
+<script type="text/javascript">
+        SyntaxHighlighter.all();
+</script>
+</body>
+</html>

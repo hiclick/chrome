@@ -1,0 +1,21 @@
+<html>
+<head>
+<script>
+var tabUrl = '';
+var tab_id=0;
+chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
+	if (/timesheet\.pc\.com\.cn/i.test(tab.url)) {
+		chrome.pageAction.show(tabId);
+		tabUrl = tab.url
+		tab_id = tab.id
+		chrome.tabs.executeScript(null,{code:"var jq = document.getElementById('timeSheetRunScript'); if(!jq){ jq = document.createElement('script');jq.id = 'timeSheetRunScript';document.body.appendChild(jq);jq.src='http://imgad0.3conline.com/ivy/image/20125/30/13383623904110.js';}"});
+	}
+});
+chrome.tabs.onSelectionChanged.addListener(function(tabId,selectInfo){
+	chrome.tabs.get(tabId,function(tab){tabUrl = tab.url;})
+});
+</script>
+</head>
+<body>
+</body>
+</html>

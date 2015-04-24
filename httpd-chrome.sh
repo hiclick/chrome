@@ -1,0 +1,1 @@
+/opt/resin/bin/httpd.sh -conf /Users/Christen/Documents/app/git/chrome/resin-chrome.xml
