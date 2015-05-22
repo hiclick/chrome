@@ -12,10 +12,10 @@ import flash.net.URLRequest;
 
 //import flash.external.ExternalInterface;
 
-[SWF(backgroundColor="0xF5F5F5", width="860", height="75")]
+[SWF(backgroundColor="0xF5F5F5", width="800", height="100")]
 public class Benbenq extends Sprite {
 
-    [Embed(source="../../../assets/img/Auto.png")]
+    [Embed(source="../../../assets/img/Audi.png")]
     private var Auto:Class;
 
 
@@ -28,7 +28,7 @@ public class Benbenq extends Sprite {
 
 
     private static function traceIvy():void {
-        var adid:Number = 10012;
+        var adid:Number = 10007;
         var imp_URL:String = "http://ivy.pcauto.com.cn/adpuba/click?adid=" + adid + "&id=auto.test.click.&"/* + "timestamp=" + new Date().getTime()*/;
         var firstFlag;//是否第一次请求，如果是，执行，否则不执行！
 
