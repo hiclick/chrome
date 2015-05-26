@@ -28,12 +28,11 @@ public class IMPtrac extends MovieClip {
 
     private var matrixMovieClip:MovieClip = new MovieClip();
 
-    [Embed(source="../../../assets/img/AudiLogo.png")]
-    private var Logo:Class;
     [Embed(source="../../../assets/img/A3Limousine.png")]
     private var Auto:Class;
 
-    public var adid:Number = 10011;
+
+    public var adid:Number = 10012;
 
     public function IMPtrac() {
 
@@ -69,13 +68,18 @@ public class IMPtrac extends MovieClip {
     }
 
     private function addLogo():void {
-        var logo:* = new Logo();
+        var logo:TextField = new TextField();
+        logo.text = "一汽 - 大众 Audi";
+        logo.textColor = 0xFFFFFF;
+        var mytf:TextFormat = new TextFormat();
+        mytf.size = 20;
+        mytf.font = "Arial";
+        logo.autoSize = TextFieldAutoSize.CENTER;
+        logo.setTextFormat(mytf);
         addChild(logo);
-        logo.scaleX = 0.5;
-        logo.scaleY = 0.5;
         logo.x = 5;
         logo.y = 20;
-        TweenMax.to(logo, 1, {x: 40, y: 20, ease:Bounce.easeIn});
+        TweenMax.to(logo, 1, {x: 20, y: 15, ease:Bounce.easeIn});
     }
 
     private function addAuto():void {
@@ -83,13 +87,13 @@ public class IMPtrac extends MovieClip {
         addChild(auto);
         auto.x = 400;
         auto.y = 0;
-        TweenMax.to(auto, 1, {x: 640, y: 20, scaleX: 0.38, scaleY: 0.38, onComplete: showAD});
+        TweenMax.to(auto, 1, {x: 640, y: 20, scaleX: 0.6, scaleY: 0.6, onComplete: showAD});
     }
 
     private function showAD():void {
         var No:Number = adid - 10000;
         var ad:TextField = new TextField();
-        ad.text = "突破科技 启迪未来 Audi A" + No;
+        ad.text = "未来 · 先见 全新 Audi S" + No;
         ad.textColor = 0xFFFFFF;
         var mytf:TextFormat = new TextFormat();
         mytf.size = 20;
