@@ -7,6 +7,8 @@
 package ivy.swf {
 import flash.display.GradientType;
 import flash.display.MovieClip;
+import flash.events.Event;
+import flash.events.TimerEvent;
 import flash.geom.Matrix;
 import flash.net.URLLoader;
 import flash.net.URLRequest;
@@ -15,6 +17,7 @@ import flash.text.TextFieldAutoSize;
 import flash.text.TextFormat;
 import flash.ui.Mouse;
 import flash.ui.MouseCursor;
+import flash.utils.Timer;
 
 import gs.TweenMax;
 import gs.easing.*;
@@ -23,57 +26,70 @@ import gs.easing.*;
 [SWF(backgroundColor="0xF5F5F5", width="800", height="100")]
 public class IMPtrac extends MovieClip {
 
-    private var basicMovieClip:MovieClip = new MovieClip();
     private var matrixMovieClip:MovieClip = new MovieClip();
-    private var moveMovieClip:MovieClip = new MovieClip();
 
     [Embed(source="../../../assets/img/AudiLogo.png")]
     private var Logo:Class;
     [Embed(source="../../../assets/img/A3Limousine.png")]
     private var Auto:Class;
 
-    private var ad:TextField;
+    public var adid:Number = 10011;
 
     public function IMPtrac() {
 
         Mouse.cursor = MouseCursor.BUTTON;
 
-        // Basic Example
-        basicMovieClip.graphics.beginFill(0xFFFFFF);
-        basicMovieClip.graphics.drawRect(0, 0, 800, 100);
-        basicMovieClip.graphics.endFill();
-        basicMovieClip.x = 0;
-        basicMovieClip.y = 0;
-        addChild(basicMovieClip);
-
-        drawBack(0, 10, 800, 80);
+        drawBack(0, 0, 800, 100);
         addChild(matrixMovieClip);
 
+        addLogo();
+        addAuto();
+        traceClick();
+
+        var myTimer:Timer = new Timer(1500);
+        myTimer.addEventListener(TimerEvent.TIMER, addMoveBox);
+        myTimer.start();
+
+    }
+
+    private function addMoveBox(evt:Event):void {
+        var moveMovieClip:MovieClip = new MovieClip();
         moveMovieClip.graphics.beginFill(0xcacbcd);
-        moveMovieClip.graphics.drawRect(0, 0, 10, 80);
+        moveMovieClip.graphics.drawRect(0, 0, 10, 100);
         moveMovieClip.graphics.endFill();
         moveMovieClip.x = 0;
-        moveMovieClip.y = 10;
+        moveMovieClip.y = 0;
         addChild(moveMovieClip);
+        TweenMax.to(moveMovieClip, 3, {
+            x: 600,
+            y: 0,
+            alpha: 0,
+            ease: Bounce.easeOut
+        });
+    }
 
-        //TweenMax.to(moveMovieClip, 1, {x:700, y:10, alpha:0});
-        TweenMax.to(moveMovieClip, 3, {x: 600, y: 10, alpha: 0, ease: Bounce.easeOut});
-
-
+    private function addLogo():void {
         var logo:* = new Logo();
         addChild(logo);
-        logo.x = 0;
-        logo.y = 0;
-        TweenMax.to(logo, 2, {x: 20, y: 30, scaleX: 0.5, scaleY: 0.5});
+        logo.scaleX = 0.5;
+        logo.scaleY = 0.5;
+        logo.x = 5;
+        logo.y = 20;
+        TweenMax.to(logo, 1, {x: 40, y: 20, ease:Bounce.easeIn});
+    }
 
+    private function addAuto():void {
         var auto:* = new Auto();
         addChild(auto);
         auto.x = 400;
         auto.y = 0;
-        TweenMax.to(auto, 1, {x: 640, y: 30, scaleX: 0.38, scaleY: 0.38});
+        TweenMax.to(auto, 1, {x: 640, y: 20, scaleX: 0.38, scaleY: 0.38, onComplete: showAD});
+    }
 
-        ad = new TextField();
-        ad.text = "突破科技 启迪未来";
+    private function showAD():void {
+        var No:Number = adid - 10000;
+        var ad:TextField = new TextField();
+        ad.text = "突破科技 启迪未来 Audi A" + No;
         ad.textColor = 0xFFFFFF;
         var mytf:TextFormat = new TextFormat();
         mytf.size = 20;
@@ -81,11 +97,14 @@ public class IMPtrac extends MovieClip {
         ad.autoSize = TextFieldAutoSize.LEFT;
         ad.setTextFormat(mytf);
         addChild(ad);
-        ad.x = 300;
-        ad.y = 40;
-
-        traceIvy();
-
+        ad.x = (stage.width - ad.width) / 2;
+        ad.y = 0;
+        TweenMax.to(ad, 1, {
+            x: (stage.width - ad.width) / 2,
+            y: (stage.height - ad.height) / 2,
+            scaleX: 1.2,
+            scaleY: 1.2
+        });
     }
 
     public function drawBack(x0:Number, y0:Number, w1:Number, h1:Number):void {
@@ -105,8 +124,7 @@ public class IMPtrac extends MovieClip {
         matrixMovieClip.graphics.drawRect(x0, y0, w1, h1);
     }
 
-    private static function traceIvy():void {
-        var adid:Number = 10009;
+    private function traceClick():void {
         var imp_URL:String = "http://ivy.pcauto.com.cn/adpuba/click?adid=" + adid + "&id=auto.test.click.&"/* + "timestamp=" + new Date().getTime()*/;
         var firstFlag;//是否第一次请求，如果是，执行，否则不执行！
 
