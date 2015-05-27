@@ -7,6 +7,8 @@
 package ivy.swf {
 import flash.display.GradientType;
 import flash.display.MovieClip;
+import flash.display.Shape;
+import flash.display.Sprite;
 import flash.events.Event;
 import flash.events.TimerEvent;
 import flash.geom.Matrix;
@@ -32,7 +34,7 @@ public class IMPtrac extends MovieClip {
     private var Auto:Class;
 
 
-    public var adid:Number = 10012;
+    public var adid:Number = 10007;
 
     public function IMPtrac() {
 
@@ -69,7 +71,7 @@ public class IMPtrac extends MovieClip {
 
     private function addLogo():void {
         var logo:TextField = new TextField();
-        logo.text = "一汽 - 大众 Audi";
+        logo.text = "一汽 - 奥迪";
         logo.textColor = 0xFFFFFF;
         var mytf:TextFormat = new TextFormat();
         mytf.size = 20;
@@ -77,9 +79,46 @@ public class IMPtrac extends MovieClip {
         logo.autoSize = TextFieldAutoSize.CENTER;
         logo.setTextFormat(mytf);
         addChild(logo);
-        logo.x = 5;
-        logo.y = 20;
-        TweenMax.to(logo, 1, {x: 20, y: 15, ease:Bounce.easeIn});
+        logo.x = 15;
+        logo.y = 50;
+
+        for (var i:Number = 1; i <= 4; i++) {
+            var c:MovieClip = new MovieClip();
+            drawCircle2(c);
+            addChild(c);
+            c.x = 15 + 20 * i;
+            c.y = 28;
+        }
+    }
+
+    //其实AS内置绘制圆形的方法，只是通常我们会填充，只要不填充，即是画一个圈
+    private static function drawCircle2(movie:MovieClip):void {
+        movie.graphics.lineStyle(2, 0xffffff);
+        movie.graphics.drawCircle(0, 0, 15);
+    }
+
+    // 这个方法是纯手工制作，暂时还没有看明白 -_-
+    private static function drawCircle1(movie:MovieClip):void {
+        var a:Number = 15;
+        var b:Number = 15;
+
+        var i:Number = 0;
+        var x1:Number;
+        var y1:Number;
+
+        var myShape:Sprite = new Sprite();
+        movie.addChild(myShape);
+
+        myShape.graphics.lineStyle(2, 0xffffff, 1);
+        myShape.graphics.moveTo(35, 20);
+
+        while (i < Math.PI * 2) {
+            i += (2 / 180 * Math.PI);
+            x1 = 20 + b * Math.cos(i);
+            y1 = 20 + a * Math.sin(i);
+            myShape.graphics.lineTo(x1, y1);
+        }
+
     }
 
     private function addAuto():void {
@@ -93,21 +132,20 @@ public class IMPtrac extends MovieClip {
     private function showAD():void {
         var No:Number = adid - 10000;
         var ad:TextField = new TextField();
-        ad.text = "未来 · 先见 全新 Audi S" + No;
+        ad.text = "型动由我 驭见未来 Audi A" + No;
         ad.textColor = 0xFFFFFF;
         var mytf:TextFormat = new TextFormat();
-        mytf.size = 20;
-        mytf.font = "黑体";
+        mytf.size = 25;
+        mytf.font = "Arial";
         ad.autoSize = TextFieldAutoSize.LEFT;
         ad.setTextFormat(mytf);
         addChild(ad);
-        ad.x = (stage.width - ad.width) / 2;
+        ad.x = (stage.width - ad.width) / 2 - 15;
         ad.y = 0;
         TweenMax.to(ad, 1, {
-            x: (stage.width - ad.width) / 2,
+            x: (stage.width - ad.width) / 2 - 15,
             y: (stage.height - ad.height) / 2,
-            scaleX: 1.2,
-            scaleY: 1.2
+            ease: Back.easeInOut
         });
     }
 
