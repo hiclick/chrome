@@ -4,7 +4,7 @@
  * Date: 13-4-15
  * Time: PM3:40
  */
-package  {
+package note  {
 
 import flash.display.MovieClip;
 import flash.events.MouseEvent;
@@ -26,7 +26,7 @@ public class Impression extends MovieClip {
 
     // http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/mx/controls/Button.html
 
-    [Embed(source="../assets/img/skydrive.png")]
+    [Embed(source="../../assets/img/skydrive.png")]
     private var BackGround:Class;
 
     private var info:TextField = new FlexTextField();

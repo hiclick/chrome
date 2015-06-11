@@ -4,7 +4,7 @@
  * Date: 15-4-16
  * Time: 上午11:02
  */
-package {
+package note {
 
 
 import be.nascom.flash.graphics.Rippler;
@@ -16,19 +16,16 @@ import flash.display.StageScaleMode;
 import flash.events.MouseEvent;
 
 
-
 [SWF(backgroundColor="0x000000", frameRate="30", width="640", height="480")]
-public class Ripple extends Sprite
-{
+public class Ripple extends Sprite {
     // Embed an image (Flex Builder only, use library in Flash Authoring)
-    [Embed(source="../assets/img/Water.png")]
-    private var _sourceImage : Class;
+    [Embed(source="../../assets/img/Water.png")]
+    private var _sourceImage:Class;
 
-    private var _target : Bitmap;
-    private var _rippler : Rippler;
+    private var _target:Bitmap;
+    private var _rippler:Rippler;
 
-    public function Ripple()
-    {
+    public function Ripple() {
         stage.scaleMode = StageScaleMode.NO_SCALE;
         stage.align = StageAlign.TOP_LEFT;
 
@@ -44,8 +41,7 @@ public class Ripple extends Sprite
     }
 
     // creates a ripple at mouse coordinates on mouse movement
-    private function handleMouseMove(event : MouseEvent) : void
-    {
+    private function handleMouseMove(event:MouseEvent):void {
         // the ripple point of impact is size 20 and has alpha 1
         _rippler.drawRipple(_target.mouseX, _target.mouseY, 20, 1);
     }

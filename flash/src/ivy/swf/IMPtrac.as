@@ -34,7 +34,7 @@ public class IMPtrac extends MovieClip {
     private var Auto:Class;
 
 
-    public var adid:Number = 10007;
+    public var adid:Number = 10016;
 
     public function IMPtrac() {
 
@@ -132,7 +132,7 @@ public class IMPtrac extends MovieClip {
     private function showAD():void {
         var No:Number = adid - 10000;
         var ad:TextField = new TextField();
-        ad.text = "型动由我 驭见未来 Audi A" + No;
+        ad.text = "型动由我 驭见未来 Audi R" + No;
         ad.textColor = 0xFFFFFF;
         var mytf:TextFormat = new TextFormat();
         mytf.size = 25;
