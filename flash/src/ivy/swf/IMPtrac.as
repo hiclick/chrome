@@ -25,7 +25,7 @@ import gs.TweenMax;
 import gs.easing.*;
 
 
-[SWF(backgroundColor="0xF5F5F5", width="800", height="100")]
+[SWF(backgroundColor="0xF5F5F5", width="1", height="1")]
 public class IMPtrac extends MovieClip {
 
     private var matrixMovieClip:MovieClip = new MovieClip();
@@ -34,7 +34,7 @@ public class IMPtrac extends MovieClip {
     private var Auto:Class;
 
 
-    public var adid:Number = 10016;
+    public var adid:Number = 10007; //#800x100
 
     public function IMPtrac() {
 
